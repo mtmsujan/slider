@@ -175,7 +175,14 @@
             slider3Wrapper.style.transform = `translateX(-${index3 * 100}%)`;
         }, 3500);
 
-
+        // slider 4
+        let index4 = 0;
+        const slider4Items = document.querySelectorAll('#slider4 [data-carousel-item]');
+        setInterval(() => {
+            slider4Items[index4].classList.add('hidden');
+            index4 = (index4 + 1) % slider4Items.length;
+            slider4Items[index4].classList.remove('hidden');
+        }, 5000);
 
         
     </script>
