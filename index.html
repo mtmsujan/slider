@@ -71,7 +71,29 @@
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script>
 
-      
+        // slider 1
+        let index1 = 0;
+        const slider1Items = document.querySelectorAll('#slider1 [data-carousel-item]');
+
+        setInterval(() => {
+        slider1Items[index1].classList.add('hidden');
+        index1 = (index1 + 1) % slider1Items.length;
+        slider1Items[index1].classList.remove('hidden');
+        }, 3000);
+
+        // Adding manual navigation for the buttons
+        document.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+        slider1Items[index1].classList.add('hidden');
+        index1 = (index1 - 1 + slider1Items.length) % slider1Items.length;
+        slider1Items[index1].classList.remove('hidden');
+        });
+
+        document.querySelector('[data-carousel-next]').addEventListener('click', () => {
+        slider1Items[index1].classList.add('hidden');
+        index1 = (index1 + 1) % slider1Items.length;
+        slider1Items[index1].classList.remove('hidden');
+        });
+
         
 
         
