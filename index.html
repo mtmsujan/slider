@@ -91,7 +91,23 @@
                 <button type="button" class="w-4 h-4 rounded-full bg-white" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             </div>
     
-            
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-800/50 rounded-full group-hover:bg-gray-800/75">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-800/50 rounded-full group-hover:bg-gray-800/75">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
         </div>
     </div>
     
