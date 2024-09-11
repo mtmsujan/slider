@@ -126,7 +126,28 @@
         </div>
     </div>
       
+    <!-- slider no 4 -->
+    <div class="max-w-6xl mx-auto mt-10">
+        <div id="slider3" class="relative">
+          <div class="flex transition-transform ease-in-out duration-500 space-x-4" id="slider3-wrapper">
+            <img src="images/4.jpg" class="block w-full rounded-lg">
+            <img src="images/5.jpg" class="block w-full rounded-lg">
+            <img src="images/6.jpg" class="block w-full rounded-lg">
+          </div>
+        </div>
+    </div>
 
+    <!-- slider no 5 -->
+    <div class="max-w-2xl mx-auto mt-10 mb-10">
+        <div id="slider4" class="relative overflow-hidden">
+          <div class="relative transition-transform ease-in-out duration-700 hover:scale-150" data-carousel-item>
+            <img src="images/4.jpg" class="w-full rounded-xl">
+          </div>
+          <div class="relative transition-transform ease-in-out duration-700 hidden hover:scale-150" data-carousel-item>
+            <img src="images/6.jpg" class="w-full rounded-xl">
+          </div>
+        </div>
+    </div>
 
 
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
@@ -155,7 +176,16 @@
         slider1Items[index1].classList.remove('hidden');
         });
 
-        
+        // slider 3
+        let index3 = 0;
+        const slider3Wrapper = document.getElementById('slider3-wrapper');
+        const slider3Items = slider3Wrapper.children.length;
+        setInterval(() => {
+            index3 = (index3 + 1) % slider3Items;
+            slider3Wrapper.style.transform = `translateX(-${index3 * 100}%)`;
+        }, 3500);
+
+
 
         
     </script>
